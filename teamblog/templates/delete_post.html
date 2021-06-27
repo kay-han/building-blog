@@ -4,6 +4,7 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
     <h1>Delete Your Post</h1>
     <br/><br/>
     <h3>Delete: {{ object.title}}</h3>
@@ -18,5 +19,7 @@
 
         </form>
     </div>
-
+{% else %}
+    <h3>Please login to delete your post.</h3>
+{% endif %}
 {% endblock %}

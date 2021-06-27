@@ -2,15 +2,19 @@
 
 {% block content %}
 
-    <h1>Blog Posts</h1>
+    <h1>Recent Posts</h1>
 
     <ul>
     {% for object in object_list %}
         <li>
-        <a href="{% url 'article-detail' object.pk %}">{{ object.title }}</a> - {{ object.author.first_name }}
-        {{ object.author.last_name }} <small>on {{ object.created_date }} | <a href="{% url 'update-post' object.pk %}">(Edit)</a>
-        | <a href="{% url 'delete-post' object.pk %}">(Delete)</a></small><br>
-        {{ object.body }} </li>
+            <a href="{% url 'article-detail' object.pk %}">{{ object.title }}</a> 
+            - {{ object.author.first_name }}
+            {{ object.author.last_name }}
+            <small>on {{ object.created_date }} | <a href="{% url 'update-post' object.pk %}">(Edit)</a>
+            | <a href="{% url 'delete-post' object.pk %}">(Delete)</a></small>
+            <br>
+            {{ object.body|slice:":300" }} 
+        </li>
     {% endfor %}
     </ul>
 

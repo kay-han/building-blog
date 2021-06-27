@@ -7,14 +7,19 @@
 {% block content %}
 
     <h1>{{ object.title }}</h1>
-    <small>By: {{object.author.first_name}} {{object.author.last_name}} | {{ object.created_date }} |
+    <small>By: {{object.author.first_name}} {{object.author.last_name}} | {{ object.created_date }} 
+
+    {% if user.is_authenticated %}
+    |
     <a href="{% url 'update-post' object.pk %}">(Edit)</a>
     <a href="{% url 'delete-post' object.pk %}">(Delete)</a></small><br>
+    {% else %}
+    {% endif %}
     <hr>
     <br/>
-    {{ object.body }}    
-
+    {{ object.body }}            
     <br/><br/>
     <a href="{% url 'home' %}" type="button" class="btn btn-secondary">Back</button></a>
+
 
 {% endblock %}
