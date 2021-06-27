@@ -1,12 +1,3 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
 {% extends 'base.html' %}
 
 {% block content %}
@@ -17,11 +8,10 @@
     {% for object in object_list %}
         <li>
         <a href="{% url 'article-detail' object.pk %}">{{ object.title }}</a> - {{ object.author.first_name }}
-        {{ object.author.last_name }} <br>
+        {{ object.author.last_name }} <small>on {{ object.created_date }} | <a href="{% url 'update-post' object.pk %}">(Edit)</a>
+        | <a href="{% url 'delete-post' object.pk %}">(Delete)</a></small><br>
         {{ object.body }} </li>
     {% endfor %}
     </ul>
 
 {% endblock %}
-</body>
-</html>

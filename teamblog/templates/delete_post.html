@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Delete Your Post {% endblock %}  
+
+{% block content %}
+
+    <h1>Delete Your Post</h1>
+    <br/><br/>
+    <h3>Delete: {{ object.title}}</h3>
+    <br/>
+    <div class="form-group">
+        <form method = "POST">
+            <!-- Create a CSRF(Cross-Site-Request-Forgery) token -->
+            {% csrf_token %}
+            <!--  {{ form.as_ul }}
+            {{ form.as_table }} -->
+            <button class="btn btn-danger">Delete Post</button>
+
+        </form>
+    </div>
+
+{% endblock %}

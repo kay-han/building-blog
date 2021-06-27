@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit Your Post {% endblock %}  
+
+{% block content %}
+
+    <h1>Edit Your Post</h1>
+    <br/><br/>
+    <div class="form-group">
+        <form method = "POST">
+            <!-- Create a CSRF(Cross-Site-Request-Forgery) token -->
+            {% csrf_token %}
+
+            <!-- Use Django for system -->
+            {{ form.as_p }}
+            <!--  {{ form.as_ul }}
+            {{ form.as_table }} -->
+            <button class="btn btn-secondary">Update</button>
+
+        </form>
+    </div>
+
+{% endblock %}
