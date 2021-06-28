@@ -2,10 +2,11 @@
 
 {% block content %}
 
-    <h1>Recent Posts</h1>
+{% if category_posts %}
 
-    <ul>
-    {% for object in object_list %}
+<h1>{{ cats|capfirst}} Posts</h1>
+<ul>
+    {% for object in category_posts %}
         <li>
             <a href="{% url 'article-detail' object.pk %}">{{ object.title }}</a> 
             - {{ object.author.first_name }}
@@ -23,5 +24,9 @@
         </li>
     {% endfor %}
     </ul>
+{% else %}
+<br/><br/>
+    <h1>The category does not exist.</h1>
+{% endif %}
 
 {% endblock %}
