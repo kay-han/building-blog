@@ -12,7 +12,7 @@
         <form method = "POST">
             <!-- Create a CSRF(Cross-Site-Request-Forgery) token -->
             {% csrf_token %}
-
+            {{ form.media }}
             <!-- Use Django for system -->
             {{ form.as_p }}
             <!--  {{ form.as_ul }}
@@ -21,6 +21,11 @@
 
         </form>
     </div>
+
+    <script>
+        var name = "{{ user.id}}";
+        document.getElementById("userid").value = name;
+    </script>
 {% else %}
     <h3>Please Login first.</h3>
 {% endif %}
