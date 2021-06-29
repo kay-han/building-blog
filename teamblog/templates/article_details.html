@@ -23,6 +23,21 @@
     {{ object.body|safe }}            
     <br/><br/>
     <a href="{% url 'home' %}" type="button" class="btn btn-secondary">Back</button></a>
+    <br/><br/>
+    <hr>
+    <form action="{% url 'like-post' object.pk %}" method="POST">
+        {% csrf_token %}
+        {% if user.is_authenticated %}
+            {% if liked %}
+                <button type="submit", name="post_id", value ="{{ object.id }}", class="btn btn-danger btn-sm">Unlike</button>
+            {% else %}
+                <button type="submit", name="post_id", value ="{{ object.id }}", class="btn btn-primary btn-sm">Like</button>
+            {% endif %}
+        {% else %}
+            <small><a class="nav-link" href="{% url 'login' %}">Login to Like!</a></small><br>
+            {{ total_likes }} Likes
+        {% endif %}
+    </form>
 
 
 {% endblock %}
