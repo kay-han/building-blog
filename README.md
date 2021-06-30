@@ -1,2 +1,2 @@
-# building-blog
-Making a Team Blog using Python, Django and Bootstrap
+# Making a Team Blog using Python, Django and Bootstrap
+
