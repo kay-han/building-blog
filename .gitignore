@@ -50,5 +50,6 @@ Makefile
 
 
 # Byte-compiled / optimized / DLL files
+db.sqlite3
 __pycache__
 *.pyc
