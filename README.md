@@ -11,7 +11,7 @@ A team blog is a blog service which includes functions below:
 8. Displays the total number of likes
 9. Change user password
 
-# The project has two basic apps:
+# The project has three basic apps:
 Teamblog (A blog shows recent posts in the timeline.)<br>
 Membership (A blog accepts a new user and manages user's information.)<br>
 CKEditor (The editor provides a RichTextField and CKEditorWidget utilizing CKEditor with image upload.)
