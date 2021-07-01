@@ -1,5 +1,5 @@
 # Making a Team Blog using Python, Django and Bootstrap
-A team blog is a blog service which includes functions below:
+This team blog includes functions below:
 
 1. Timeline showing recent posts
 2. A snippet for each post on timeline
