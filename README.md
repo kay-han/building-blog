@@ -2,11 +2,12 @@
 A team blog is a blog service which includes functions below:
 
 1. Timeline showing recent posts
-2. Sign-Up
-3. Login
-4. Add, update or delete their own post by an authenticated user
-5. Like/Dislike post
-6. Change password
+2. A snippet for each post on timeline
+3. Sign-Up
+4. Login
+5. Add, update or delete their own post by an authenticated user
+6. Like/Dislike post
+7. Change password
 
 # The project has two basic apps:
 Teamblog (A blog shows recent posts in the timeline)<br>
