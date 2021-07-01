@@ -6,7 +6,7 @@ A team blog is a blog service which includes functions below:
 3. Sign-Up
 4. Login
 5. Add, update or delete their own post by an authenticated user
-6. Like/Dislike post
+6. Like/Dislike a post and displays the total number of likes
 7. Change password
 
 # The project has two basic apps:
