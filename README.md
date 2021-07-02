@@ -18,6 +18,7 @@ CKEditor (The editor provides a RichTextField and CKEditorWidget utilizing CKEdi
 
 # Technology Stack
 Python 3.9.5<br>
-Twitter Bootstrap 5<br>
 Django Web Framework 3.2.4<br>
+Twitter Bootstrap 5<br>
+HTML, CSS, Javascript <br>
 
